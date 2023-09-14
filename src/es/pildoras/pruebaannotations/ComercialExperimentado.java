@@ -7,15 +7,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class ComercialExperimentado implements Empleados {
 
-	
+	//@Autowired (Aca tambien se puede por reflexion)
 	private CreacionInformeFinanciero nuevoinforme;
-	
-	@Autowired
+	public ComercialExperimentado(){
+		
+	}
+	/*@Autowired
 	public ComercialExperimentado(CreacionInformeFinanciero nuevoinforme) {
 		super();
 		this.nuevoinforme = nuevoinforme;
+	}*/
+	
+	@Autowired
+	public void setNuevoinforme(CreacionInformeFinanciero nuevoinforme) {
+		this.nuevoinforme = nuevoinforme;
 	}
-
 	@Override
 	public String getTareas() {
 		// TODO Auto-generated method stub
