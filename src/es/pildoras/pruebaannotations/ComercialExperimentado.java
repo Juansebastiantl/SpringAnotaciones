@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class ComercialExperimentado implements Empleados {
 
 	//@Autowired (Aca tambien se puede por reflexion)
+	@Autowired
 	private CreacionInformeFinanciero nuevoinforme;
 	public ComercialExperimentado(){
 		
@@ -19,9 +20,10 @@ public class ComercialExperimentado implements Empleados {
 	}*/
 	
 	@Autowired
+	/*
 	public void setNuevoinforme(CreacionInformeFinanciero nuevoinforme) {
 		this.nuevoinforme = nuevoinforme;
-	}
+	}*/
 	@Override
 	public String getTareas() {
 		// TODO Auto-generated method stub
@@ -30,7 +32,7 @@ public class ComercialExperimentado implements Empleados {
 
 	@Override
 	public String getInforme() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub	
 		//return "Informe generado por el comercial";
 		return nuevoinforme.getInformeFinanciero();
 	}
