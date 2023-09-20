@@ -3,7 +3,7 @@ package es.pildoras.pruebaannotations;
 import org.springframework.stereotype.Component;
 
 @Component
-public class InformeFinancieroTrim1 implements CreacionInformeFinanciero {
+public class InformefinancieroTrim1 implements CreacionInformeFinanciero {
 
 	@Override
 	public String getInformeFinanciero() {
